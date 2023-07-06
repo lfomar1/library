@@ -1,0 +1,169 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Shantell+Sans&display=swap");
+:root {
+  --background-color: #f0eef1;
+  --spacing-lg: 20px;
+  --container-width: 1200px;
+}
+::backdrop {
+  --color-backdrop: rgba(0, 0, 0, 0.5);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 500;
+  background-color: var(--background-color);
+  height: 100vh;
+}
+header {
+  background-color: whitesmoke;
+}
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--spacing-lg);
+  max-width: var(--container-width);
+  margin: 0 auto;
+}
+.logo > h1 {
+  font-weight: bold;
+  font-size: 3rem;
+}
+.login {
+  font-family: inherit;
+  font-weight: bold;
+  font-size: 1rem;
+  padding: 15px 25px;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+}
+.shadow-line {
+  width: 100%;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  padding: var(--spacing-lg);
+  max-width: var(--container-width);
+  margin: 0 auto;
+  justify-content: center;
+}
+.add-book {
+  font-family: inherit;
+  font-weight: bold;
+  font-size: 24px;
+  font-weight: 600;
+  padding: 15px 25px;
+  border: none;
+  border-radius: 12px;
+  transition: transform 0.2s ease-in-out;
+}
+.add-book:hover {
+  transform: scale(1.1);
+  filter: brightness(90%);
+  cursor: pointer;
+}
+.modal {
+  transform: translate(-50%, -50%);
+  transition: 200ms ease-in-out;
+  top: 50%;
+  left: 50%;
+  width: 300px;
+  background-color: var(--background-color);
+  border-radius: 12px;
+  border: none;
+  filter: brightness(90%);
+  padding: var(--spacing-lg);
+}
+.modal::backdrop {
+  background-color: var(--color-backdrop);
+}
+form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+form > h3 {
+  font-size: 24px;
+}
+form > input {
+  border: none;
+  font-size: 24px;
+  border-radius: 12px;
+  background-color: white;
+  padding: 1rem;
+}
+.is-read {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.is-read input {
+  cursor: pointer;
+}
+.btn-light-green {
+  cursor: pointer;
+  border: none;
+  border-radius: 12px;
+  font-size: 20px;
+  font-weight: bold;
+  background-color: lightgreen;
+  padding: 15px 25px;
+  width: 90%;
+  transition: transform 0.2s ease-in-out;
+}
+.btn-light-green:hover {
+  transform: scale(1.1);
+}
+
+.modal.active {
+  transform: translate(-50%, -50%) scale(1);
+}
+.books-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 0.35fr));
+  grid-gap: 10px;
+}
+.books {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-transform: uppercase;
+  gap: 2rem;
+  background-color: white;
+  border-radius: 12px;
+  padding: 20px;
+  margin-top: 20px;
+}
+.remove-btn {
+  border: none;
+  width: 100%;
+  padding: 1rem;
+  background-color: salmon;
+  font-size: bold;
+  text-transform: uppercase;
+  border-radius: 12px;
+  font-weight: bold;
+  font-size: 16px;
+  cursor: pointer;
+}
+.isReadBtn {
+  border: none;
+  width: 100%;
+  padding: 1rem;
+  font-size: bold;
+  text-transform: uppercase;
+  border-radius: 12px;
+  font-weight: bold;
+  font-size: 16px;
+  cursor: pointer;
+}

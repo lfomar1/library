@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Library</title>
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="icon" href="./imgs/favicon.ico" />
+  </head>
+  <body>
+    <header>
+      <div class="header">
+        <div class="logo">
+          <h1>📚 Library</h1>
+        </div>
+        <button class="login">Log In</button>
+      </div>
+      <div class="shadow-line"></div>
+    </header>
+    <div class="container">
+      <button data-modal-target="#modal" class="add-book">+ Add books</button>
+      <div class="books-grid" id="booksGrid"></div>
+      <dialog class="modal" id="modal">
+        <form class="add-book-form" method="dialog">
+          <h3>Add a new book</h3>
+          <input
+            type="text"
+            id="title"
+            placeholder="Title"
+            class="title-book"
+            maxlength="100"
+          />
+          <input
+            type="text"
+            id="author"
+            placeholder="Author"
+            class="author-book"
+            maxlength="100"
+          />
+          <input
+            type="number"
+            id="pages"
+            placeholder="Pages"
+            class="pages-book"
+            max-length="1000"
+          />
+          <div class="is-read">
+            <label for="is-read">Have you read it?</label>
+            <input type="checkbox" id="isRead" class="isread-book" />
+          </div>
+          <button type="submit" class="btn-light-green" id="submit">
+            Submit
+          </button>
+        </form>
+      </dialog>
+    </div>
+    <script src="./script.js"></script>
+  </body>
+</html>
